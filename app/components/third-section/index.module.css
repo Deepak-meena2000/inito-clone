@@ -1,0 +1,21 @@
+.mainSection {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 0px;
+  background-color: #f2f8fa;
+  text-align: center;
+  padding: 48px 20px 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSection {
+    margin: 48px auto;
+    background-color: #fff;
+    padding: 0px;
+    gap: 30px;
+  }
+}

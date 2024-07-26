@@ -1,0 +1,71 @@
+.mainContainer {
+  /* background-image: url(https://cdn.inito.com/inito_website/v2_main_hero_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+.mainSection {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #c4f2ff;
+  padding-top: 1em;
+  overflow: hidden;
+}
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px 5px 38px;
+  gap: 8px;
+}
+
+.mainStars {
+  display: flex;
+  gap: 12px;
+}
+
+.howIntoWorksButton {
+  position: relative;
+  top: -1.2rem;
+  border-radius: 26px;
+  background-color: #1f94aa;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    background-image: url(https://cdn.inito.com/inito_website/v2_main_hero_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mainSection {
+    overflow: visible;
+    height: 100%;
+    top: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    background: none;
+    padding-top: 1.5em;
+  }
+
+  .mainTextContainer {
+    margin: 8rem 0 0 0;
+    gap: 24px;
+  }
+  .howIntoWorksButton {
+    margin : 0;
+    top: 0.5rem;
+  }
+}
