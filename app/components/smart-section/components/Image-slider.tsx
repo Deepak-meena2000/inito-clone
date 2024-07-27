@@ -42,7 +42,7 @@ const ImageSlider = () => {
                   <div className="absolute top-[10%] ">
                     <Image
                       src="/image-swiper1.svg"
-                      width={360}
+                      width={isMobile ? 360 : 500}
                       height={120}
                       alt="inito tracks everything"
                     />

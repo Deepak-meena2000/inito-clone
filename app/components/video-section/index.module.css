@@ -1,0 +1,50 @@
+.mainContainer {
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.videoSectionGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.videoNumber {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  background-color: #1f94aa;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    max-width: 1089px;
+    margin: 64px auto;
+    flex-direction: row;
+  }
+
+  .videoSectionGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 50%;
+  }
+
+  .videoNumber {
+    position: static;
+    background-color: #eeeef5;
+    padding: 12px 20px;
+    color: #112d35;
+    font-size: 24px;
+  }
+}

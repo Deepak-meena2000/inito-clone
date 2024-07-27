@@ -10,6 +10,9 @@ import SmartSection from "./components/smart-section";
 const ReviewSection = dynamic(() => import("./components/review-section"), {
   ssr: false,
 });
+const VideoSection = dynamic(() => import("./components/video-section"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -21,6 +24,7 @@ export default function Home() {
         <ThirdSection />
         <PredictComponent />
         <SmartSection />
+        <VideoSection />
         <ReviewSection />
         <Accordion items={AccordionItems} />
       </div>

@@ -47,7 +47,7 @@ const FirstSection = () => {
             <RenderHeroButton />
           </div>
         </div>
-        <div className="flex relative -left-[5rem] lg:static ">
+        <div className="flex relative -left-[5rem] ">
           <Image
             width={400}
             height={400}
@@ -59,7 +59,7 @@ const FirstSection = () => {
             width={750}
             height={700}
             alt="desktop image"
-            className="hidden lg:block"
+            className="hidden lg:block max-w-[750px] w-[700px]"
             src={"	https://cdn.inito.com/inito_website/v2_main_hero_desktop.png"}
           />
         </div>
