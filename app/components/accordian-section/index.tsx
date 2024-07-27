@@ -41,7 +41,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 mt-10 lg:mt-16">
       <div className="text-center">
         <span className="font-bold text-3xl">
           Your top questions <br></br>are answered

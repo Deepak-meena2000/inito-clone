@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { headers } from "next/headers";
+import { getConfigFromHeaders } from "@/server/util";
+import { ConfigProvider } from "./global-context";
 
 const monsterrat = Montserrat({
   subsets: ["latin"],
@@ -17,9 +20,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = headers();
+  const config = getConfigFromHeaders(headersList);
   return (
     <html lang="en">
-      <body className={monsterrat.className}>{children}</body>
+      <ConfigProvider initialConfig={config}>
+        <body className={monsterrat.className}>{children}</body>
+      </ConfigProvider>
     </html>
   );
 }

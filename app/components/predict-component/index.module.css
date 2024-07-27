@@ -1,0 +1,67 @@
+.mainContainer {
+  display: flex;
+}
+
+.mainSectionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.firstSectionGrid {
+  display: grid;
+  grid-template-areas: "predict predict" "image image";
+  background-color: #b4e4f2;
+  padding: 48px 40px 0px 40px;
+}
+
+.imageContainer {
+  grid-area: image;
+}
+
+.predictContainer {
+  grid-area: predict;
+}
+
+.neverMissSection {
+  grid-area: nevermiss;
+}
+
+.graphSection {
+  grid-area: graph;
+}
+
+.secondSectionGrid {
+  display: grid;
+  grid-template-areas: "nevermiss nevermiss" "graph graph";
+  padding: 48px 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    max-width: 1089px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 32px;
+    background-color: #e1f4fa;
+  }
+
+  .mainSectionContainer {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .firstSectionGrid {
+    display: grid;
+    grid-template-areas: "image predict";
+    grid-template-columns: 50% 50%;
+    background-color: #e1f4fa;
+    padding: 0px;
+  }
+  .secondSectionGrid {
+    display: grid;
+    grid-template-areas: "nevermiss graph";
+    grid-template-columns: 50% 50%;
+    padding: 0px;
+  }
+}
