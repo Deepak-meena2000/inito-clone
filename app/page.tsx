@@ -1,12 +1,26 @@
 import dynamic from "next/dynamic";
-import Accordion from "./components/accordian-section";
 import { AccordionItems } from "./components/accordian-section/constant";
 import { Header } from "./components/header";
 import FirstSection from "./components/main-hero";
-import NewsSection from "./components/news-section";
-import ThirdSection from "./components/third-section";
-import PredictComponent from "./components/predict-component";
-import SmartSection from "./components/smart-section";
+const NewsSection = dynamic(() => import("./components/news-section"), {
+  ssr: false,
+});
+const Accordion = dynamic(() => import("./components/accordian-section"), {
+  ssr: false,
+});
+const ThirdSection = dynamic(() => import("./components/third-section"), {
+  ssr: false,
+});
+const PredictComponent = dynamic(
+  () => import("./components/predict-component"),
+  {
+    ssr: false,
+  }
+);
+
+const SmartSection = dynamic(() => import("./components/smart-section"), {
+  ssr: false,
+});
 const ReviewSection = dynamic(() => import("./components/review-section"), {
   ssr: false,
 });

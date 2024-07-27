@@ -1,9 +1,10 @@
 import Link from "next/link";
 import styles from "../index.module.css";
 import Image from "next/image";
+import { ImageSrc } from "@/app/constants/image";
 const WhySmart = () => {
   return (
-    <div className={`${styles.whySmartContainer}`}>
+    <div className={`${styles.whySmartContainer} pb-9`}>
       <div className="flex flex-col gap-5 lg:gap-7 my-[2em] mx-7 lg:mx-0 lg:my-10">
         <h1 className="text-[30px] leading-[35px] font-bold lg:text-4xl text-[#112D35] ">
           Get charts and actual values of your hormones
@@ -26,7 +27,7 @@ const WhySmart = () => {
       </div>
       <div className="w-full ">
         <Image
-          src="https://cdn.inito.com/inito_website/why_inito_is_smarter_way/get_charts_and_actual_values@2x.png"
+          src={ImageSrc.GET_CHARTS_AND_ACTUAL_VALUES}
           alt="get charts and actual values"
           width={320}
           height={320}

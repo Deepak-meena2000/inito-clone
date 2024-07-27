@@ -1,5 +1,6 @@
 "use client";
 
+import { ImageSrc } from "@/app/constants/image";
 import { useConfig } from "@/app/global-context";
 import Image from "next/image";
 
@@ -11,15 +12,14 @@ const ImageChart = () => {
     <div className="flex items-center justify-center w-full mt-9 lg:mt-0">
       {isMobile ? (
         <Image
-          src="https://cdn.inito.com/inito_website/hormones_graph_mob.jpg"
-          //   fill
+          src={ImageSrc.HORMONES_GRAPH_MOBILE}
           width={320}
           height={320}
           alt="chart"
         />
       ) : (
         <Image
-          src="https://cdn.inito.com/inito_website/hormones_graph_desktop_v2.png"
+          src={ImageSrc.HORMONES_GRAPH_DESKTOP}
           alt="chart"
           width={320}
           height={320}

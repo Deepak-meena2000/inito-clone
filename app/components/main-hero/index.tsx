@@ -1,6 +1,9 @@
+"use client";
+import { ImageSrc } from "@/app/constants/image";
 import styles from "./index.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useConfig } from "@/app/global-context";
 
 const RenderHeroButton = () => {
   return (
@@ -13,6 +16,9 @@ const RenderHeroButton = () => {
 };
 
 const FirstSection = () => {
+  const {
+    common: { isMobile },
+  } = useConfig();
   return (
     <section className={styles.mainContainer}>
       <div className={styles.mainSection}>
@@ -22,7 +28,7 @@ const FirstSection = () => {
               {Array.from({ length: 5 }).map((_, index) => (
                 <Image
                   key={index}
-                  src="https://cdn.inito.com/inito_website/star.png"
+                  src={ImageSrc.STAR}
                   width={10}
                   height={10}
                   alt="star"
@@ -48,20 +54,26 @@ const FirstSection = () => {
           </div>
         </div>
         <div className="flex relative -left-[5rem] ">
-          <Image
-            width={400}
-            height={400}
-            alt="mobile image"
-            className="block lg:hidden"
-            src={"	https://cdn.inito.com/inito_website/v2_main_hero_mobile.png"}
-          />
-          <Image
-            width={750}
-            height={700}
-            alt="desktop image"
-            className="hidden lg:block max-w-[750px] w-[700px]"
-            src={"	https://cdn.inito.com/inito_website/v2_main_hero_desktop.png"}
-          />
+          {isMobile ? (
+            <Image
+              width={400}
+              height={400}
+              priority
+              fetchPriority="high"
+              alt="mobile image"
+              src={ImageSrc.MAIN_HERO_MOBILE}
+            />
+          ) : (
+            <Image
+              fetchPriority="high"
+              priority
+              width={750}
+              height={700}
+              alt="desktop image"
+              className=" max-w-[750px] w-[700px]"
+              src={ImageSrc.MAIN_HERO_DESKTOP}
+            />
+          )}
         </div>
       </div>
       <div className="flex lg:hidden">

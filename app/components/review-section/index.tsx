@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import { ReviewItems } from "./constant";
+import { ImageSrc } from "@/app/constants/image";
 
 const ReviewSection = () => {
   return (
@@ -34,7 +35,7 @@ const ReviewSection = () => {
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Image
                     key={index}
-                    src="https://cdn.inito.com/inito_website/star.png"
+                    src={ImageSrc.STAR}
                     width={10}
                     height={10}
                     alt="star"

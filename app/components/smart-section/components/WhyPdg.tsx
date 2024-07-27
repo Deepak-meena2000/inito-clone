@@ -2,6 +2,7 @@
 import { useConfig } from "@/app/global-context";
 import styles from "../index.module.css";
 import Image from "next/image";
+import { ImageSrc } from "@/app/constants/image";
 const WhyPdg = () => {
   const {
     common: { isMobile },
@@ -11,7 +12,7 @@ const WhyPdg = () => {
       {!isMobile && (
         <Image
           className="absolute -right-9 -top-11"
-          src="https://cdn.inito.com/inito_website/blue_calendar.png"
+          src={ImageSrc.BLUE_CALENDAR}
           alt="blue calendar"
           width={120}
           height={120}
@@ -38,7 +39,7 @@ const WhyPdg = () => {
       </p>
       <div className="flex items-center gap-4 text-sm">
         <Image
-          src="https://cdn.inito.com/inito_website/doc_testimonial_wagner.jpg"
+          src={ImageSrc.DOC_TESTIMONAL_WAGNER}
           alt="doctor image"
           width={isMobile ? 32 : 64}
           height={isMobile ? 32 : 64}

@@ -1,11 +1,11 @@
 "use client";
 import { useConfig } from "@/app/global-context";
-import styles from "../index.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import { ImageSrc } from "@/app/constants/image";
 const Images = ["/image-swiper1.svg"];
 
 const ImageSlider = () => {
@@ -33,7 +33,7 @@ const ImageSlider = () => {
               <SwiperSlide key={index}>
                 <div className="relative">
                   <Image
-                    src="https://cdn.inito.com/inito_website/why_inito_is_smarter_way/inito_tracks_everything@2x.jpg"
+                    src={ImageSrc.INITO_TRACKS_EVERYTHING}
                     width={200}
                     height={120}
                     alt="inito tracks everything"
